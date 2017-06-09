@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>羽人竞渡青铜钺</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <style>
+
+        body {
+            margin: 0;
+            background-color: #e7e7e7;
+            overflow: hidden;
+        }
+
+        .img{
+            height: 5%;
+            border: 0;
+            text-align: center;
+            position: fixed;
+            margin-top: 5%;
+            margin-left: 90%;
+        }
+
+        a {
+            color: #858585;
+        }
+
+
+        button {
+            color: rgb(255,255,255);
+            background: transparent;
+            border: 0px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+
+        #div1 {
+            display: block;
+            top: 10px;
+            left: 10px;
+            position: absolute;
+            z-index: 1000;
+
+            font-size: 20px;
+            font-weight: bold;
+            color:#858585;
+            width:100%;
+            height:29px;
+        }
+        #div2 {
+            color: #000000;
+            display:block;
+            width: 100%;
+            bottom: 10px;
+            position:absolute;
+            text-align: center;
+
+            font-size: 14px;
+
+            z-index:1002;
+
+        }
+
+
+    </style>
+
+	</head>
+	<body>
+
+
+
+    <script src="js01/three.js"></script>
+    <script src="js01/TrackballControls.js"></script>
+    <script src="js01/PDBLoader.js"></script>
+    <script src="js01/CSS2DRenderer.js"></script>
+    <script src="js01/Detector.js"></script>
+    <script src="js01/OBJLoader.js"></script>
+    <script src="js01/jquery-3.1.1.min.js"></script>
+
+
+     <audio id="music2" src="misc/yedegangqin.mp3" autoplay ></audio>
+        <a class="a" href="javascript:playPause();"><img  class="img" src="image/play.png" id="music_btn2"></a>
+
+    <script>
+
+			var camera, scene, renderer;
+			var controls;
+			var loader = new THREE.PDBLoader();
+            var tex='tietu/y04.jpg';
+            var mesh='obj01/yue04.obj';
+
+
+            var system ={};
+            var p = navigator.platform;
+            system.win = p.indexOf("Win") == 0;
+            system.mac = p.indexOf("Mac") == 0;
+            system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+            if(system.win||system.mac||system.x11){
+                tex="tietu/y04.jpg";
+            }else{
+                tex="tietu/y04.jpg";
+            }
+
+			init();
+			animate();
+
+			function init() {
+                //��������
+				scene = new THREE.Scene();
+                //���������
+				camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 250;
+				scene.add( camera );
+
+			    //���������ƹ�
+				var directionalLight = new THREE.DirectionalLight(0xffffff, 0.1);
+				directionalLight.position = camera.position;
+			    //��ӵƹ⵽����
+				//scene.add(directionalLight);
+				var ambientLight = new THREE.AmbientLight(0xffffff, 1.1);
+
+				scene.add(ambientLight);
+                var hemiLight = new THREE.HemisphereLight(0xffffff,0xffffff,0.3);
+                hemiLight.position.set(0,500,0);
+               // scene.add(hemiLight);
+			    //����������ͼ
+				var manager = new THREE.LoadingManager();
+				manager.onProgress = function (item, loaded, total) {
+				    console.log(item, loaded, total);
+				};
+				var texture = new THREE.Texture();
+				var onProgress = function (xhr) {
+				    if (xhr.lengthComputable) {
+				        var percentComplete = xhr.loaded / xhr.total * 100;
+				        console.log(Math.round(percentComplete, 2) + '% downloaded');
+				    }
+				};
+				var loader = new THREE.ImageLoader(manager);
+				loader.load(tex, function (image) {
+				    texture.image = image;
+				    texture.needsUpdate = true;
+				});
+			    // ����model
+				var loader = new THREE.OBJLoader(manager);
+				loader.load(mesh, function (object) {
+				    object.traverse(function (child) {
+				        if (child instanceof THREE.Mesh) {
+				           child.material.map = texture;
+                          // child.material=new THREE.MeshPhongMaterial({ map:texture,
+       // specular:0xffffff,shininess:20});
+				        }
+				    });
+				    object.scale.x = object.scale.y = object.scale.z =1.2;
+				    object.position.set(0, 0, 0);
+                   // object.rotation.set(0,0,60);
+				    scene.add(object);
+				    render();
+				});
+
+
+			    //��Ⱦ
+				renderer = new THREE.WebGLRenderer({ antialias: true });
+				renderer.setClearColor(0xe7e7e7);
+				renderer.setPixelRatio(window.devicePixelRatio);
+				renderer.setSize(window.innerWidth, window.innerHeight);
+				document.body.appendChild(renderer.domElement);
+
+				controls = new THREE.TrackballControls( camera, renderer.domElement );
+				controls.minDistance = 200;
+				controls.maxDistance = 2000;
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			//
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				render();
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				controls.update();
+				render();
+
+			}
+
+			function render() {
+
+				renderer.render( scene, camera );
+			}
+           function playPause() {
+
+                var music = document.getElementById('music2');
+                var music_btn = document.getElementById('music_btn2');
+                if (music.paused){
+                    music.play();
+                    music_btn.src = 'image/play.png';
+                }
+                else{
+                    music.pause();
+                    music_btn.src = 'image/pause.png';
+                }
+
+            }
+
+
+    </script>
+    <div id="div1">宁波博物馆丨羽人竞渡青铜钺</div>
+    <div id="div2"> <a href="http://www.tj720.com" >探景科技出品</a></div>
+    <div><button></button> </div>
+
+	</body>
+</html>

@@ -1,0 +1,450 @@
+/*轮播图样式1 start*/
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+/*.index_slider{
+    width: 1500px;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+    margin:0 auto;
+}
+.index_slider span{
+	position:absolute;
+	left:74px;
+	background:url('../images/index_left');
+}
+.index_slider li{
+	float:left;
+	position:absolute;
+	height: 800px;
+}
+#lunbo{
+	position:absolute;
+	top: 0;  
+	left: 0;
+	height:800px;
+
+}
+#lunbo li{
+	float:left;
+	z-index:0;
+}
+#lunbo li img{
+}
+#list{
+	position:absolute;
+	bottom:20px;
+	right:100px;
+}
+#list li{
+	float:left;
+	border-radius:50%;
+	width:10px;
+	height:10px;
+	margin-left:10px;
+	cursor:pointer;
+	background:#eee;
+}
+#list li:hover,#list li.hover{
+	background:#a0a0a0;
+}*/
+.index_slider{
+	width:100%;  /*xiugai*/
+	height:800px;
+	overflow:hidden;
+	position:relative;
+	margin-top:73px;
+}
+#lunbo{
+	position:absolute;
+	top: 0;  left: 0;
+	height:800px;
+	width:100%;
+	overflow: hidden;
+}
+#lunbo li{
+	float:left;
+	z-index:0;
+	width: 33.33%;
+	height:800px;
+	overflow: hidden;
+}
+#lunbo li img{
+	width: 100%;
+	height:800px;
+}
+#list{
+	position:absolute;
+	bottom:20px;
+	right:50%;
+}
+#list li{
+	float:left;
+	border-radius:50%;
+	width:10px;
+	height:10px;
+	margin-left:10px;
+	cursor:pointer;
+	background:#eee;
+}
+#list li:hover,#list li.hover{
+	background:#90c1ff;
+}
+.index_slider>span{
+	position:absolute;
+	left:70px;
+	top:50%;
+	transform: translateY(-50%);
+	width: 82px;
+	height: 126px;
+	/*background-color:rgba(255,255,255,.28);*/
+	/*color:#fff;*/
+	/*font-weight: 700;*/
+	line-height: 126px;
+	/*font-size: 50px;*/
+	/*text-align:center;*/
+	/*font-weight: 200;*/
+	cursor:pointer;
+}
+.index_slider .index_slider_left_btn{
+	background: url("../images/index_left.png");
+	background-size: 82px 126px;
+}
+.index_slider .index_slider_right_btn{
+	left:auto;
+	right:70px;
+	background: url("../images/index_right.png");
+	background-size: 82px 126px;
+}
+
+.index_slider_circle{
+	position: absolute;
+	left:50%;
+	top:50%;
+	width: 396px;
+	height: 396px;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,.5);
+	transform: translate3d(-50%,-50%,0);
+	color:#fff;
+	text-align: center;
+}
+.index_slider_circle h3{
+	margin:133px auto 32px;
+	font-size:35px;
+	font-weight: 700;
+	transform: translateY(-500px);
+	transition: transform .5s;
+}
+.index_slider_circle h3.on{
+	transform:translateY(0);
+}
+
+.index_slider_circle h3.cur{
+	transform:translateY(-500px);
+}
+.index_slider_circle p.on{
+	transform:translateY(0);
+}
+.index_slider_circle p.cur{
+	transform:translateY(500px);
+}
+.index_slider_circle p{
+	font-size:28px;
+	font-family: "DengXian-Regular";
+	font-weight: 200;
+	transform: translateY(500px);
+	transition: transform .5s;
+
+}
+
+/*轮播图样式1 end*/
+
+.index_title{
+	width:100%;
+	margin:70px auto 50px;
+	text-align:center;
+}
+.index_title h2{
+	font-size:26px;
+	color:#111111;
+	font-family:"MicrosoftYaHei";
+}
+.index_title p{
+	font-family: "DengXian-Regular";
+	font-size:21px;
+	color:#6d8dac;
+}
+/*轮播图样式2 start*/
+
+.index_slider2{
+	width: 1092px;
+    height: 462px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.index_slider2:after{
+	content:"";
+	display:block;
+	height: 0;
+	width: 0;
+	clear: both;
+}
+.index_slider2_list:after{
+	content:"";
+	display:block;
+	height: 0;
+	width: 0;
+	clear: both;
+}
+
+.index_slider2 .index_slider2_list {
+	/*position:absolute;
+	left:50%;*/
+	width:1100px;
+	/*margin-left:200px;*/
+	float:left;
+	/*transform:translateX(-50%);*/
+
+}
+.index_slider2_wrapper{
+	width: 1000%;
+	position:absolute;
+	left:0px;
+	top:0;
+	height: 415px;
+	overflow: hidden;
+}
+
+.index_slider2_wrapper:after{
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	clear: both;
+}
+.index_slider2 .index_slider2_list a{
+	margin-right:22px;
+	position:relative;
+	transition:all .2s;
+}
+.index_slider2 .index_slider2_list a h3{
+	position:absolute;
+	left:0;
+	bottom: -50px;
+	height: 105px;
+	width: 528px;
+	background-color:rgba(0,0,0,.5);
+    margin-left: 4px;
+    text-align:center;
+    opacity: 0;
+}
+.index_slider2 .index_slider2_list a h3 p{
+	font-size:20px;
+	color:#fff;
+	margin-top:20px;
+	margin-bottom: 10px;
+}
+.index_slider2 .index_slider2_list a h3 span{
+	/*font-size:26px;*/
+	color:#fff;
+
+}
+.index_slider2 .index_slider2_list div{
+	position:relative;
+}
+.index_slider2 .index_slider2_list div h3{
+	position:absolute;
+	left:0;
+	bottom: -50px;
+	height: 105px;
+	width: 528px;
+	background-color:rgba(0,0,0,.5);
+    margin-left: 4px;
+    text-align:center;
+    line-height: 105px;
+    opacity: 0;
+}
+
+.index_slider2 .index_slider2_list div:hover h3{
+	display: block;
+}
+.index_slider2 .index_slider2_list div h3>img{
+	vertical-align: middle;
+}
+.index_slider2 .index_slider2_list div h3 span{
+	/*font-size:26px;*/
+	color:#fff;
+}
+.index_slider2>span{
+	position: absolute;
+	left:54%;
+	bottom:0px;
+	cursor:pointer;
+}
+.index_slider2_left{
+	width: 38px;
+	height: 32px;
+	background:url("../images/index_2_left1.png") no-repeat;
+	background-size:38px 32px;
+	margin-left:-90px;
+}
+.index_slider2_left:hover{
+	background:url("../images/index_2_left2.png") no-repeat;
+}
+.index_slider2_right{
+	width: 38px;
+	height: 32px;
+	background:url("../images/index_2_right1.png") no-repeat;
+	background-size:38px 32px;
+	margin-left:-33px;
+}
+.index_slider2_right:hover{
+	background:url("../images/index_2_right2.png") no-repeat;
+}
+/*轮播图样式1 end*/
+
+.index_education_banner{
+	width: 100%;
+	position: relative;
+}
+.index_education_banner>img{
+	height: 340px;
+}
+.index_education_banner p{
+	position:absolute;
+	left:50%;
+	top:50%;
+	color:#fff;
+	font-size:18px;
+	transform:translate3d(-50%,-50%,0);
+	text-align: center;
+}
+.index_education_banner>img{
+	width:100%;
+	height: 340px;
+}
+.index_zs .index_msg{
+	width: 879px;
+	font-size:16px;
+	color:#464646;
+	height: 44px;
+	text-align:left;
+	text-indent:2em;
+	overflow:hidden;
+	margin:46px auto 0;
+}
+
+/*可移动文物数字化保护与展示 start*/
+.index_education{
+	height: 267px;
+	width: 1052px;
+	margin:0 auto;
+	white-space: nowrap;
+}
+.index_education img{
+	width: 150px !important;
+	height: ;
+}
+
+.index_education a:nth-of-type(2)>img{
+	transform: translate3d(-54px,90px,0);
+}
+.index_education a:nth-of-type(3)>img{
+	transform: translate3d(-45px,90px,0);
+}
+.index_education a:nth-of-type(4)>img{
+	transform: translate3d(-98px,0,0);
+}
+.index_education a:nth-of-type(5)>img{
+	transform: translate3d(-88px,0,0);
+}
+.index_education a:nth-of-type(6)>img{
+	transform: translate3d(-140px,90px,0);
+}
+.index_education a:nth-of-type(7)>img{
+	transform: translate3d(-132px,90px,0);
+}
+.index_education a:nth-of-type(8)>img{
+	transform: translate3d(-185px,2px,0);
+}
+/*可移动文物数字化保护与展示 end*/
+.index_gj_slider{
+	position:relative;
+}
+/*全景漫游 start*/
+.index_qjmy{
+	width: 1100px;
+	margin:0 auto;
+	height: 885px;
+}
+.index_qjmy:after{
+	content:"";
+	display:block;
+	clear:both;
+	width:0;
+	height: 0;
+}
+.index_qjmy>div{
+	float:left;
+	margin-right:6px;
+}
+.index_qjmy>div img{
+	width: 544px;
+}
+.index_qjmy>div>a{
+	display:block;
+	margin-bottom:3px;
+	position: relative; 
+}
+.index_qjmy>div>a:hover>span{
+	position:absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	color:#fff;
+	font-size: 24px;
+	text-align: center;
+	display:inline-block !important;
+}
+.index_qjmy .index_qjmy_left >a:nth-of-type(1)>span{
+	line-height: 339px;
+	display:none;
+}
+.index_qjmy .index_qjmy_left >a:nth-of-type(2)>span{
+	line-height: 540px;
+	display:none;
+}
+.index_qjmy .index_qjmy_right >a:nth-of-type(1)>span{
+	line-height: 540px;
+	display:none;
+}
+.index_qjmy .index_qjmy_right >a:nth-of-type(2)>span{
+	line-height: 339px;
+	display:none;
+}
+.index_animal p{
+	font-size:20px;
+	font-weight: 200;
+	line-height: 30px;
+}
+.index_animal p .title{
+	display:block;
+	text-align:center;
+	font-size: 24px;
+	margin-bottom:18px;
+
+}
+/*全景漫游 end*/
+
+.gdal:hover{
+	background-color: #5a9fe0 !important;
+	color: white !important;
+}

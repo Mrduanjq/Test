@@ -1,0 +1,168 @@
+/*body {
+  font-family: "Josefin Slab";
+  height: 100vh;
+  background-color: #222;
+}
+*/
+.section-project {
+  padding: 50px 0;
+  position: relative;
+  height: 567px;
+  background: url("../images/img/index_bg.png") no-repeat;
+  background-size: cover;
+}
+
+.section__title, .section__subtitle {
+  text-align: center;
+  color: white;
+  display: block;
+}
+
+.section__title {
+  font-size: 3em;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+
+.section__subtitle {
+  font-size: 1.2em;
+  line-height: 1.5;
+  opacity: .5;
+}
+.section__subtitle a {
+  color: inherit;
+}
+
+.project-carousel {
+  position: relative;
+  padding: 0 0;
+}
+
+.project-strip {
+  margin: 150px 0 150px;
+  /*-webkit-filter: blur(10px);*/
+          /*filter: blur(10px);*/
+}
+.project-strip .project {
+  cursor: pointer;
+  width: 350px;
+  height: 270px;
+}
+.project-strip img {
+  /*max-width: 100%;*/
+  /*width: 100%;*/
+  height: auto;
+}
+
+.project-screen {
+  width: 768px;
+  height: 451px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.project-screen .project-detail {
+  position: absolute;
+  left: 88px;
+  right: 0;
+  top:15px;
+  width: 436px;
+  height: 388px;
+  margin: 32px auto 0;
+  z-index: 1;
+}
+.project-screen .screen-frame {
+  content: " ";
+  width: 436px;
+  height: 388px;
+  left: 50%;
+  margin-left: -194px;
+  position: absolute;
+  top:30px;
+  background: url("../images/img/frame.png") no-repeat;
+  /*z-index: 999;*/
+}
+.project-screen .screen-frame>span{
+  position: relative;
+  display:block;
+  width: 40px;
+  height: 37px;
+  background: url('../images/img/index_search_big.png');
+  background-size: 40px 37px;
+  margin:175px auto 0;
+  z-index: 100;
+}
+
+
+.project-screen .screen-frame:hover::after{
+  content: '';
+  width: 396px;
+  height: 353px;
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  /* 自己瞎填的参数，示意 */
+  background-color: rgba(0, 0, 0,0.702);
+  background-image: url('../img/big.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+
+
+
+.project-screen .project-detail .project {
+  margin-right: -100%;
+  float: left;
+  cursor: pointer;
+  width: 396px;
+  height: 353px;
+}
+.project-screen .project-detail .project img{
+  width: 396px;
+  height: 353px;
+}
+.cover{
+  position: fixed;
+  left: 0;
+  top:0;
+  right:0;
+  bottom:0;
+  /*width: 100%;
+  height: 100%;*/
+  background: rgba(0,0,0,0.8);
+  z-index: 999;
+  display: none;
+}
+.close{
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  position: absolute;
+  right:0;
+  top:0;
+  color: #fff;
+  background: rgba(203, 42, 45, 0.8);
+  text-align: center;
+  line-height:30px;
+  cursor: pointer;
+}
+.cover .img{
+  width:800px;
+  height: 700px;
+  /*background: red;*/
+  position: absolute;
+  left: 50%;
+  top:50%;
+  margin-left: -400px;
+  margin-top: -350px;
+}
+.cover .img img{
+  width: 100%;
+  height: 100%;
+}

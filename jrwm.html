@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>探景科技</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<!--CSS初始化文件-->
+		<link rel="stylesheet" href="css/reset.min.css"/>
+		
+		<!--头部CSS-->
+		<link rel="stylesheet" href="css/public.css"/>
+		
+		<!--加入我们页面CSS-->
+		<link rel="stylesheet" href="css/jaruwomen.css"/>
+		
+		
+	</head>
+	<body>
+		<header class="tj_header">
+			<div>
+				<div class="tj_header_logo">
+					<img src="images/tj_top_logo.png" alt="探景官网logo" />
+				</div>
+				<ul class="ti_header_nav">
+					<li class="ti_header_active">
+						<div></div>
+						<a href="jrwm.html">加入我们</a>
+					</li>
+					<li>
+						<div></div>
+						<a href="aboutTj.html">关于探景</a>
+					</li>
+					<li>
+						<div></div>
+						<a href="hezuokehu.html">合作客户</a>
+					</li>
+					<li>
+						<div></div>
+						<a href="index.html">产品与服务</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!-- 页面主题 -->
+		<section>
+			<div class="tj_jrwm_banner"></div>
+			<!--<div class="tj_jrwm_banner">
+				<img src="images/tj_jrwm_banner.png" alt="探景科技banner"/>
+			</div>-->
+			<div class="tj_jrwm_title">
+				<h2>加入我们</h2>
+				<h3>Join Us</h3>
+				<p>欢迎更多的公司成为我们的合作伙伴</p>
+			</div>
+			<div class="tj_jrwm_content">
+				<ul>
+					<li>
+						<div></div>
+						<h2>PHONE</h2>
+						<p>010-53556837-6003</p>
+					</li>
+					<li>
+						<div></div>
+						<h2>FAX</h2>
+						<p>010-53556837</p>
+					</li>
+					<li>
+						<div></div>
+						<h2>EMAIL</h2>
+						<p>bj_tanjing@sina.com</p>
+					</li>
+					<li>
+						<div></div>
+						<h2>ADDRESS</h2>
+						<p>北京市丰台区南四环西路128号院诺德中心1号楼6层</p>
+					</li>
+				</ul>
+			</div>
+			<div class="tj_jrwm_hr"></div>
+			
+			<!--地图-->
+			
+			<div id="allmap"></div>
+		</section>
+		<footer>
+    		<div class="info">
+    			<div class="info-content">
+    				<div class="tjkj">
+    				<p><img src="images/footer_logo.png" alt=""></p>
+    				<ul>
+    					<li><a href="index.html"><span>·</span> 产品与服务</a></li>
+    					<li><a href="hezuokehu.html"><span>·</span> 合作客户</a></li>
+    					<li><a href="aboutTj.html"><span>·</span> 关于探景</a></li>
+    					<li><a href="jrwm.html"><span>·</span> 加入我们</a></li>
+    				</ul>
+    			</div>
+    			<div class="lxwm">
+    				<p>联系我们</p>
+    				<ul>
+    					<li>联系电话：010-53556837-6003</li>
+    					<li>传真：010-53556837</li>
+    					<li>公司地址：北京市丰台区南四环西路128号院诺德中心1号楼6层</li>
+    					<li>公司邮箱：bj_tanjing@sina.com</li>
+    				</ul>
+    			</div>
+    			<div class="ewm">
+    				<img src="images/tjewm.png" alt="">
+    				<p>扫描二维码</p>
+    			</div>
+    			</div>
+    			
+    		</div>
+    		<div class="beian">
+    			版权所有：探景科技&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备案编号：<a href="#">京ICP备15054522号</a>
+    		</div>
+    	</footer>
+	</body>
+	
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=vx7YWGKnP7PL4eo9Gg70zBDXhRvsIZV5"></script>
+	<script type="text/javascript">
+		// 百度地图API功能
+		var map = new BMap.Map("allmap");
+		var point = new BMap.Point(116.3056834367,39.8354636372);
+		map.centerAndZoom(point, 18);
+		var marker = new BMap.Marker(point);  
+		map.addOverlay(marker);               
+		marker.setAnimation(BMAP_ANIMATION_BOUNCE); 
+		map.enableScrollWheelZoom();
+	</script>
+	<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/tj_header.js" type="text/javascript" charset="utf-8"></script>
+</html>

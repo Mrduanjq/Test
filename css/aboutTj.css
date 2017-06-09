@@ -1,0 +1,195 @@
+/*
+* @Author: Administrator
+* @Date:   2017-06-06 10:29:14
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-06-06 13:55:34
+*/
+.banner{
+	width: 100%;
+	height: 346px;
+	background: url("../images/aboutTjbanner.png") no-repeat;
+	background-size: 100% 100%;
+}
+.aboutTj .title{
+	width: 626px;
+	margin:0 auto;
+	height: 114px;
+	text-align: center;
+	border-bottom: 2px solid #E4E4E4;
+}
+.aboutTj .title h2{
+	font-size: 26px;
+	padding-top: 22px;
+}
+.aboutTj .title h3{
+	font-size: 21px;
+	color: #6C8DAC;
+}
+.aboutTj .context{
+	width: 970px;
+	padding-top: 54px;
+	padding-bottom: 35px;
+	margin:0 auto;
+	font-size: 16px;
+	line-height: 26px;
+	color: #666666;
+}
+.why{
+	width: 100%;
+	height: 470px;
+	background: url("../images/why.png") no-repeat;
+	background-size: 100% 100%;
+}
+.why .our{
+	border-bottom:none;
+	color: #FFFFFF;
+}
+.why .our h2{
+	padding-top: 40px;
+	padding-bottom: 10px;
+}
+.why .our i{
+	display: inline-block;
+	width: 50px;
+	height: 2px;
+	background: #88BDEE;
+
+}
+.why .why-info{
+	width: 1032px;
+	overflow: hidden;
+	margin:0 auto;
+	color: #F8F8F8;
+	padding-top: 66px;
+}
+.why .why-info .why01{
+	padding-left: 90px;
+	width: 410px;
+	background: url("../images/why01.png") no-repeat top left;
+	float: left;
+}
+.why .why-info .why02{
+	background: url("../images/why02.png") no-repeat top left;
+	padding-left: 90px;
+	float: right;
+}
+.why .why-info span{
+	display: inline-block;
+	width: 370px;
+	margin-top: 40px;
+	line-height: 28px;
+	font-size: 16px;
+}
+.ourCase .container h2{
+	font-size: 22px;
+	margin-bottom: 8px;
+}
+.ourCase .container i{
+	display: inline-block;
+	width: 50px;
+	height: 2px;
+	background: #88BDEE;
+}
+.ourCase{
+	width: 100%;
+	height: 506px;
+	background: url("../images/anlibg.png") no-repeat;
+	background-size: 100% 100%;
+}
+.ourCase .container{
+	border-bottom: none;
+}
+
+
+
+
+
+/*案例CSS*/
+.anli-lunbo{
+	width: 1095px;
+	height: 199px;
+	padding-top:30px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.anli-lunbo>span{
+	position:absolute;
+	/*left:50%;
+	top:50%;*/
+	width: 53px;
+	height: 81px;
+	top: 123px;
+	cursor: pointer;
+}
+.anli-lunbo>.btn-left{
+	/*transform: translate3d(-1110%,-50%,0);*/
+	left: -53px;
+	background: url(../images/anli-left.png);
+	background-size: 53px 81px;
+	
+}
+.anli-lunbo>.btn-right{
+	right: -53px;
+	/*left:auto;*/
+	/*right:50%;*/
+	/*transform: translate3d(1108%,-50%,0);*/
+	background: url(../images/anli-right.png);
+	background-size: 53px 81px;
+	
+}
+
+.anli-lunbo>div{
+	width: 100%;
+	height: 269px;
+	position: relative;
+	overflow: hidden;
+}
+
+.anli-lunbo ul{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 1000%;
+	/*margin-top:30px;*/
+}
+.anli-lunbo ul:after{
+	content:"";
+	display:block;
+	height: 0;
+	width: 0;
+	clear:both;
+}
+.anli-lunbo ul li{
+	float: left;
+	margin:0 20px;
+}
+.anli-lunbo ul li p{
+	text-align: center;
+	height: 68px;
+	line-height: 68px;
+	background: #fff;
+}
+.anli-lunbo ul li a{
+	display: block;
+	width: 326px;
+	height: 200px;
+	background-color:rgba(0,0,0,0.5);
+	background-image: url(../images/anli-serach.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top:-200px;
+}
+.anli-lunbo ul li i{
+	display: block;
+	width: 326px;
+	height: 68px;
+	position: absolute;
+	background: #91CAFE;
+	bottom:-68px;
+}
+.anli-lunbo ul li p>span{
+	position: relative;
+	z-index: 50;
+}
